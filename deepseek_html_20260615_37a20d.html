@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Минимализм | Главная</title>
+    <meta name="description" content="Минималистичный многостраничный сайт с картинками, описаниями и текстом. Окна связи и техподдержка.">
+    <!-- Подключение стилей и скриптов -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Шрифт для минималистичного стиля -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="site-wrapper">
+        <!-- Шапка с навигацией (ссылки между страницами) -->
+        <header class="site-header">
+            <div class="container header-container">
+                <div class="logo">
+                    <a href="index.html">· minimal</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Главная</a></li>
+                        <li><a href="page2.html">Вдохновение</a></li>
+                        <li><a href="page3.html">Поддержка</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+                <!-- Основной блок: картинка, описание, текст под ней -->
+                <article class="content-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/id/1015/800/500" alt="Горный пейзаж, минимализм" loading="lazy">
+                    </div>
+                    <h2 class="card-description">Тишина и гармония</h2>
+                    <div class="card-text">
+                        <p>Настоящая эстетика в простоте. Этот проект воплощает идею чистоты линий и естественной красоты. Здесь нет лишнего — только суть, переданная через образ и смысл. Горный пейзаж напоминает, как важно иногда замедляться и чувствовать пространство вокруг.</p>
+                        <p>Минимализм — это не отсутствие деталей, а идеальный баланс. Каждая линия, каждый оттенок работает на общую атмосферу. Мы стремимся создавать цифровые пространства, где вы можете сосредоточиться на главном.</p>
+                    </div>
+                </article>
+
+                <!-- Блок с кнопками для окон связи и техподдержки + ссылки -->
+                <div class="action-bar">
+                    <button class="btn btn-outline" id="openContactBtn">✉️ Окно связи</button>
+                    <button class="btn btn-outline" id="openSupportBtn">🛠️ Техподдержка</button>
+                </div>
+
+                <!-- Дополнительные ссылки (внутренние и внешние) -->
+                <div class="links-section">
+                    <span class="links-label">Полезные ссылки →</span>
+                    <ul class="inline-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="page2.html">Галерея идей</a></li>
+                        <li><a href="page3.html">Центр помощи</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">Политика конфиденциальности</a></li>
+                        <li><a href="mailto:hello@minimal.site">hello@minimal.site</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- Подвал с дополнительными контактами / ссылками -->
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p class="footer-copy">© 2026 Minimal — чистота и смысл</p>
+                <div class="footer-links">
+                    <a href="#">Инстаграм</a>
+                    <a href="#">Телеграм</a>
+                    <a href="mailto:support@minimal.site">support@minimal.site</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальное окно "Окно связи" (контактная форма) -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" data-modal="contactModal">&times;</span>
+            <h3>Связь с нами</h3>
+            <p>Заполните форму, и мы ответим в ближайшее время.</p>
+            <form id="contactForm" class="modal-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Электронная почта" required>
+                <textarea rows="3" placeholder="Сообщение..." required></textarea>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно "Техподдержка" (поддержка + форма) -->
+    <div id="supportModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" data-modal="supportModal">&times;</span>
+            <h3>Центр техподдержки</h3>
+            <div class="support-info">
+                <p>📞 Горячая линия: <strong>8 800 555-35-35</strong></p>
+                <p>✉️ Почта: <a href="mailto:tech@minimal.site">tech@minimal.site</a></p>
+                <p>💬 Часы работы: Пн–Пт, 10:00 – 19:00 (МСК)</p>
+            </div>
+            <hr class="modal-divider">
+            <p class="support-sub">Опишите вашу проблему — мы поможем</p>
+            <form id="supportForm" class="modal-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="text" placeholder="Тема обращения" required>
+                <textarea rows="3" placeholder="Подробное описание ситуации..." required></textarea>
+                <button type="submit" class="btn btn-primary">Отправить запрос</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
